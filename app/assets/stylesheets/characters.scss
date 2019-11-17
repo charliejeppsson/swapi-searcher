@@ -1,17 +1,89 @@
-// Place all the styles related to the characters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.characters {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-// Colors
-$darkGrey: #212121;
-$lightGrey: #333333;
-$white: #fafafa;
-$yellow: #dea70b;
+  &__search-form {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    padding: 20px;
+    background-color: $lightGrey;
+    border-radius: 5px;
+    box-shadow: $boxShadow;
+    margin: 0 5px 20px 5px;
+    position: relative;
+  }
 
-// Other
-$boxShadow: 1px 1px 3px black;
+  &__search-input {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: $boxShadow ;
+    font-size: 14px;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;
+  }
 
-body {
-  background-color: $darkGrey;
-  color: $white;
+  &__search-btn {
+    background-color: $yellow;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: $boxShadow;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 440px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    list-style: none;
+    background-color: $lightGrey;
+    border-radius: 5px;
+    box-shadow: $boxShadow;
+    padding: 10px;
+    margin: 0 5px 10px 5px;
+    overflow: visible;
+    text-align: left;
+  }
+
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  &__pagination-btn {
+    min-width: 30px;
+  }
 }

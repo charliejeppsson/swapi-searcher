@@ -1,0 +1,9 @@
+@import "fonts";
+@import "variables";
+@import "characters";
+
+body {
+  background-color: $darkGrey;
+  color: $white;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
