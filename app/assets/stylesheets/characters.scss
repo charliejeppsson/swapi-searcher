@@ -85,5 +85,18 @@
 
   &__pagination-btn {
     min-width: 30px;
+
+    input {
+      height: 20px;
+      width: 30px;
+      background-color: $yellow;
+      padding: 0 10px 5px 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: $boxShadow;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
   }
 }
