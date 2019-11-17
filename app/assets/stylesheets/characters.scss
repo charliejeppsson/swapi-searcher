@@ -1,0 +1,17 @@
+// Place all the styles related to the characters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Colors
+$darkGrey: #212121;
+$lightGrey: #333333;
+$white: #fafafa;
+$yellow: #dea70b;
+
+// Other
+$boxShadow: 1px 1px 3px black;
+
+body {
+  background-color: $darkGrey;
+  color: $white;
+}

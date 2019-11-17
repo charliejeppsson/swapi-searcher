@@ -1,0 +1,21 @@
+<h1>Search your favorite Star Wars character</h1>
+
+<%# search form %>
+<%= form_with(url: characters_path, method: "get", local: true) do %>
+  <%= label_tag(:search, "Search for character:") %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("Search", name: nil) %>
+<% end %>
+
+<%# search results list %>
+<% if @characters.present? %>
+  <ul>
+    <% @characters.each do |character| %>
+      <li>
+        <p><%= character["name"] %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No characters found :(</p>
+<% end %>
