@@ -1,0 +1,21 @@
+<div class="characters__pagination">
+  <div class="characters__pagination-btn">
+    <% if params[:page].present? && params[:page].to_i > 1 %>
+      <%= button_to("<", characters_path, method: :get, params: {
+        page: params[:page].to_i - 1,
+        search: params[:search]
+      }) %>
+    <% end %>
+  </div>
+
+  <p>Page <%= params[:page] || 1 %></p>
+
+  <div class="characters__pagination-btn">
+    <% if @next_page_exists %>
+      <%= button_to(">", characters_path, method: :get, params: {
+        page: (params[:page].to_i || 1) + 1,
+        search: params[:search]
+      }) %>
+    <% end %>
+  </div>
+</div>

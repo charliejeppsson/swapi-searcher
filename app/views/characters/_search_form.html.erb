@@ -1,0 +1,14 @@
+<%= form_with(
+  url: characters_path,
+  method: "get",
+  local: true,
+  class: "characters__search-form"
+) do %>
+  <%= text_field_tag(
+    :search,
+    params[:search],
+    class: "characters__search-input"
+  ) %>
+  <%= hidden_field_tag "page", 1  %>
+  <%= submit_tag("Search", name: nil, class: "characters__search-btn") %>
+<% end %>

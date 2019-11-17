@@ -1,0 +1,13 @@
+<div class="characters__list">
+  <% if @characters.present? %>
+    <ul>
+      <% @characters.each do |character| %>
+        <li class="characters__list-item">
+          <p><%= character["name"] %></p>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No characters found :(</p>
+  <% end %>
+</div>
