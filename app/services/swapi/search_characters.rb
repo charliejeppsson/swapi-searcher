@@ -11,7 +11,7 @@ module Swapi
         return JSON.parse(res.body)
       else
         puts "Error: #{res.status}, #{res.reason_phrase}"
-        return { results: [] }
+        return { "results" => [] }
       end
     end
   end
